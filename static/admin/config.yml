@@ -18,24 +18,24 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
-  - name: "options"
-    label: "Site Options"
-    file: "src/global/index.yml"
-    extension: "yml"
-    fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "global-page"}
-      - {label: Meta Fileds, name: metaFields, widget: object, fields:
-        - {label: Meta Title, name: metaTitle, widget: string}
-        - {label: Meta Description, name: metaDescription, widget: text}
-        - {label: Keywords, name: keywords, widget: string}
-        - {label: Open Graph Url, name: ogUrl, widget: string}
-        - {label: Open Graph Site Name, name: ogSiteName, widget: string}
-        - {label: Open Graph Description, name: ogDescription, widget: text}
-        - {label: Twitter Site Name, name: twitterSiteName, widget: string}
-        - {label: Twitter Site Url, name: twitterSiteUrl, widget: string}
-        - {label: Twitter Site Description, name: twitterSiteDescription, widget: text}
-        - {label: Twitter Site Description, name: twitterSiteDescription, widget: text}
-      }
+  # - name: "options"
+  #   label: "Site Options"
+  #   file: "src/global/index.yml"
+  #   extension: "yml"
+  #   fields:
+  #     - {label: "Template Key", name: "templateKey", widget: "hidden", default: "global-page"}
+  #     - {label: Meta Fileds, name: metaFields, widget: object, fields:
+  #       - {label: Meta Title, name: metaTitle, widget: string}
+  #       - {label: Meta Description, name: metaDescription, widget: text}
+  #       - {label: Keywords, name: keywords, widget: string}
+  #       - {label: Open Graph Url, name: ogUrl, widget: string}
+  #       - {label: Open Graph Site Name, name: ogSiteName, widget: string}
+  #       - {label: Open Graph Description, name: ogDescription, widget: text}
+  #       - {label: Twitter Site Name, name: twitterSiteName, widget: string}
+  #       - {label: Twitter Site Url, name: twitterSiteUrl, widget: string}
+  #       - {label: Twitter Site Description, name: twitterSiteDescription, widget: text}
+  #       - {label: Twitter Site Description, name: twitterSiteDescription, widget: text}
+  #     }
   - name: "pages"
     label: "Pages"
     files:
