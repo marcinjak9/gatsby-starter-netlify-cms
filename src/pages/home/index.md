@@ -1,5 +1,7 @@
 ---
-templateKey: 'home-page'
-path: /home
-title: Homepage
+templateKey: home-page
+metaTitle: prova
+metaDescription: ciao
+keywords: tutto bene?
 ---
+
