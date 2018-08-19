@@ -2,9 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Content, { HTMLContent } from '../components/Content'
 
-export const HomePageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content
-
+export const HomePageTemplate = ({ title, description, keywords }) => {
   return (
     <section className="section section--gradient">
       <div className="container">
@@ -14,7 +12,8 @@ export const HomePageTemplate = ({ title, content, contentComponent }) => {
               <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                 {title}
               </h2>
-              <PageContent className="content" content={content} />
+              <p>{description}</p>
+              <p>{keywords}</p>
             </div>
           </div>
         </div>
@@ -34,9 +33,11 @@ const HomePage = ({ data }) => {
 
   return (
     <HomePageTemplate
-      contentComponent={HTMLContent}
-      title={post.frontmatter.title}
-      content={post.html}
+      // contentComponent={HTMLContent}
+      title={post.frontmatter.metaTitle}
+      description={post.frontmatter.metaDescription}
+      keywords={post.frontmatter.keywords}
+    // content={post.html}
     />
   )
 }
@@ -50,9 +51,10 @@ export default HomePage
 export const homePageQuery = graphql`
   query HomePage($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      html
       frontmatter {
-        title
+        metaTitle
+        metaDescription
+        keywords
       }
     }
   }
